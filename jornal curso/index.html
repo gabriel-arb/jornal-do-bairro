@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jornal do Bairro</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #333;
+        }
+
+        header {
+            background-color: darkred;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            background-color: darkred;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav li {
+            display: inline;
+            margin-right: 10px;
+            cursor: pointer;
+        }
+
+        nav li:hover, nav li:active {
+            color: #ffcc00;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 20px;
+        }
+
+        article {
+            background-color: dimgray;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        a:visited {
+            color: #990099;
+        }
+
+        a:hover {
+            color: #ff3300;
+        }
+
+        h1 {
+            color: darkred;
+            font-size: 2em;
+            margin-bottom: 20px;
+            transition: color 0.5s;
+        }
+
+        h1:hover {
+            color: #ffcc00;
+            cursor: pointer;
+        }
+
+        @keyframes shake {
+            0%, 100% {
+                transform: translateX(0);
+            }
+            25%, 75% {
+                transform: translateX(-5px);
+            }
+            50% {
+                transform: translateX(5px);
+            }
+        }
+
+        .shake {
+            animation: shake 0.5s ease-in-out;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 class="shake">Jornal do Bairro</h1>
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Últimas Notícias</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Política</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Esportes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Entretenimento</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main>
+        <div id="carouselExample" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://mediaim.expedia.com/destination/2/694a1732aac2f61db0db467369199192.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://www.guiadoturismobrasil.com/up/img/1444516122.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://tvaraxa.com.br/wp-content/uploads/2022/04/Revitalizacao-Cristo-3-1-1.jpeg" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Próximo</span>
+            </a>
+        </div>
+
+        <section>
+            <article>
+                <h2>Notícia Importante</h2>
+                <p>Conteúdo da notícia</p>
+                <iframe src="https://www.youtube.com/embed/seuvideo" frameborder="0" allowfullscreen></iframe>
+                <p><a href="https://www.cnn.com" target="_blank">Leia mais na CNN, em sua matéria exclusiva sobre o bairro </a></p>
+            </article>
+        </section>
+    </main>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-6">
+                <form>
+                    <div class="form-group">
+                        <label for="search">Pesquisar Notícias:</label>
+                        <input type="text" class="form-control" id="search" placeholder="Digite sua pesquisa">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Pesquisar</button>
+                </form>
+            </div>
+            <div class="col-md-6">
+                <button class="btn btn-success">Compartilhe</button>
+                <button class="btn btn-info">Comentários</button>
+                <button class="btn btn-warning">Inscreva-se</button>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Endereço: Rua Abacadabra - Telefone: 54 34 99121-9999</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
